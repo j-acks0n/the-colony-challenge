@@ -1,0 +1,11 @@
+.avatar {
+  width: 37px;
+  height: 37px;
+  vertical-align: middle;
+}
+
+.avatarContainer {
+  width: 5%;
+  text-align: center;
+  padding-right: 20px
+}

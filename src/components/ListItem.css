@@ -1,0 +1,55 @@
+.copyPrimary {
+  font-size: 14px;
+}
+.copySecondary {
+  font-size: 12px;
+}
+
+.copyRegular {
+  font-weight: 400;
+}
+
+.copyHeavy {
+  font-weight: 700;
+}
+
+.listItemContainer {
+  display: flex;
+  justify-content: flex-start;
+  width: 700px;
+  height: 38px;
+  padding: 26px 20px;
+  background: white;
+  align-items: center;
+}
+
+.listItemContainerNoBorder {
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 4px 6px -1px rgb(62 118 244 / 14%),
+    inset 0 -10px 8px -10px rgb(62 118 244 / 14%);
+}
+.listItemContainerTopBorder {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 4px 6px -1px rgb(62 118 244 / 14%),
+    inset 0 -10px 8px -10px rgb(62 118 244 / 14%);
+}
+.listItemContainerBottomBorder {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.listItemText {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.listItemText:hover {
+  white-space: normal;
+}
+
+.caption {
+  display: table-caption;
+  color: gray;
+}

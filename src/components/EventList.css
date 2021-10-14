@@ -1,0 +1,7 @@
+.eventList {
+  width: 700px;
+  height: auto;
+  box-shadow: 0 2px 7px rgba(62, 118, 244, 0.14);
+  display: inline-block;
+  margin: 5vh 0 0 0;
+}
