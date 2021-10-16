@@ -1,11 +1,16 @@
+import { useEffect } from "react";
 import "./Avatar.css";
-const Avatar = () => {
+// import { blockies } from "ethereum-blockies";
+// const Blockies = require("react-blockies");
+import Blockies from "react-blockies";
+type AvatarType = {
+  userAddress: string;
+};
+
+const Avatar = ({ userAddress }: AvatarType) => {
   return (
     <div className="avatarContainer">
-      <img
-        className="avatar"
-        src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1634205337~hmac=844cab8fb15d1ba648cb45f80d777e06"
-      />
+      <Blockies seed={userAddress} size={10} scale={3.7} className="avatar" />
     </div>
   );
 };

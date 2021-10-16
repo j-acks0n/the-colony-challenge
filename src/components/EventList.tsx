@@ -1,12 +1,29 @@
+import { allEventsType } from "../ColonyClient";
 import "./EventList.css";
 import ListItem from "./ListItem";
 
-const EventList = () => {
+type EventListType = {
+  data: allEventsType[];
+};
+const EventList = ({ data }: EventListType) => {
   return (
     <div className="eventList">
-      {Array.from(Array(10), (e, i) => {
-        return <ListItem classBorder={`${i === 0 ? "listItemContainerTopBorder" : i === 9 ? "listItemContainerBottomBorder" : "listItemContainerNoBorder"}`}/>;
-      })}
+      {
+        data.map((item, i) => {
+          return (
+            <ListItem
+              item = {item}
+              classBorder={`${
+                i === 0
+                  ? "listItemContainerTopBorder"
+                  : i === data.length
+                  ? "listItemContainerBottomBorder"
+                  : "listItemContainerNoBorder"
+              }`}
+            />
+          );
+        })
+      }
     </div>
   );
 };

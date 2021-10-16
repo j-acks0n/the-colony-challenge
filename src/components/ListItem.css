@@ -44,9 +44,13 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  text-align: left;
 }
-.listItemText:hover {
-  white-space: normal;
+
+.listItemText:hover > .primaryText {
+  text-overflow: unset;
+  overflow: visible;
+  white-space: break-spaces;
 }
 
 .caption {
