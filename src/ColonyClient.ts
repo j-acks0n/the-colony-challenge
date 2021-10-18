@@ -230,7 +230,7 @@ export async function retrieveData() {
   }
 
   allEvents.sort(function (a, b) {
-    return new Date(a.date).getTime() - new Date(b.date).getTime();
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
   return allEvents;
 }

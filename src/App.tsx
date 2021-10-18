@@ -8,14 +8,23 @@ function App() {
   const [data, setData] = useState<allEventsType[]>([]);
   useEffect(() => {
     retrieveData().then((retrievedData) => {
-      console.log(retrievedData);
       setData(retrievedData);
       setDataFetched(true);
     });
   }, []);
   return (
     <div>
-      {dataFetched ? <EventList data={data} /> : <div>Data loading</div>}
+      {dataFetched ? (
+        <EventList data={data} />
+      ) : (
+        <div className="loadingMessgeWrapper">
+          <div className="loadingMessageContainer">
+            <div className="loadingMessage">Data is currently being loaded, it will take from 30 seconds to a few minutes. Please be patient!</div>
+            <div id="loading"></div>
+          </div>
+
+        </div>
+      )}
     </div>
   );
 }

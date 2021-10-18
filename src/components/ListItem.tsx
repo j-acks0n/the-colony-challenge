@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { allEventsType } from "../ColonyClient";
 import Avatar from "./Avatar";
 import "./ListItem.css";
@@ -34,7 +33,7 @@ const ListItem = ({ classBorder, item }: listItemType) => {
     const fundingPotId = primary.fundingPotId;
     primaryText = (
       <>
-        User <span className="copyHeavy">userAddress</span> claimed <span className="copyHeavy">{amount}${token}</span> payout from pot <span className="copyHeavy">{fundingPotId}</span>.
+        User <span className="copyHeavy">{userAddress}</span> claimed <span className="copyHeavy">{amount}${token}</span> payout from pot <span className="copyHeavy">{fundingPotId}</span>.
       </>
     );
   } else if (eventType === "DomainAdded") {

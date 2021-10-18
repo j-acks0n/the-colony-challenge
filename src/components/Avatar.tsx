@@ -1,7 +1,4 @@
-import { useEffect } from "react";
 import "./Avatar.css";
-// import { blockies } from "ethereum-blockies";
-// const Blockies = require("react-blockies");
 import Blockies from "react-blockies";
 type AvatarType = {
   userAddress: string;
